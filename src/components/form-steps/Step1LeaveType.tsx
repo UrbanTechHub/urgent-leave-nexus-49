@@ -9,16 +9,14 @@ const Step1LeaveType = () => {
   
   const handleSelect = (type: string) => {
     updateFormData({ leaveType: type });
-  };
-  
-  const handleNext = () => {
-    nextStep();
+    // Automatically go to the next step when a selection is made
+    setTimeout(() => nextStep(), 300);
   };
   
   return (
     <div className="animate-fade-in">
-      <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">Select Leave Type</h2>
-      <p className="text-center mb-8 text-gray-600">
+      <h2 className="text-2xl font-bold mb-6 text-center text-gray-800 font-serif">Select Leave Type</h2>
+      <p className="text-center mb-8 text-gray-600 font-serif">
         Please select the type of leave required for the military personnel
       </p>
       
@@ -32,8 +30,8 @@ const Step1LeaveType = () => {
           onClick={() => handleSelect('Short-Term Leave')}
         >
           <CardContent className="p-6">
-            <h3 className="text-xl font-medium mb-2">Short-Term Leave</h3>
-            <p className="text-gray-600 mb-4">
+            <h3 className="text-xl font-medium mb-2 font-serif">Short-Term Leave</h3>
+            <p className="text-gray-600 mb-4 font-serif">
               For emergency absences of 1-14 days to address urgent family matters
             </p>
             <div className="flex items-center">
@@ -62,8 +60,8 @@ const Step1LeaveType = () => {
           onClick={() => handleSelect('Long-Term Leave')}
         >
           <CardContent className="p-6">
-            <h3 className="text-xl font-medium mb-2">Long-Term Leave</h3>
-            <p className="text-gray-600 mb-4">
+            <h3 className="text-xl font-medium mb-2 font-serif">Long-Term Leave</h3>
+            <p className="text-gray-600 mb-4 font-serif">
               For extended absences of 15+ days for serious emergencies or medical needs
             </p>
             <div className="flex items-center">
@@ -82,16 +80,6 @@ const Step1LeaveType = () => {
             </div>
           </CardContent>
         </Card>
-      </div>
-      
-      <div className="flex justify-center mt-10">
-        <Button 
-          onClick={handleNext} 
-          disabled={!formData.leaveType}
-          className="bg-unblue hover:bg-unblue-dark text-white py-2 px-8 font-medium"
-        >
-          Continue to Eligibility
-        </Button>
       </div>
     </div>
   );
