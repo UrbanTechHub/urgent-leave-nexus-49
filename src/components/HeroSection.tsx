@@ -1,82 +1,29 @@
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { 
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselPrevious,
-  CarouselNext
-} from '@/components/ui/carousel';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 
-const slideImages = [
-  {
-    url: 'https://images.unsplash.com/photo-1621427628124-499ff0f6d80b',
-    alt: 'Military medical personnel treating patients in a field hospital'
-  },
-  {
-    url: 'https://images.unsplash.com/photo-1618498082410-b4aa22193b38',
-    alt: 'Doctors and nurses providing care in a refugee camp'
-  },
-  {
-    url: 'https://images.unsplash.com/photo-1584036561566-baf8f5f1b144',
-    alt: 'Military nurse attending to a child in humanitarian mission'
-  },
-  {
-    url: 'https://images.unsplash.com/photo-1576765608535-5f04d1e3f289',
-    alt: 'Medical team working in emergency field conditions'
-  },
-  {
-    url: 'https://images.unsplash.com/photo-1583324113626-70df0f4deaab',
-    alt: 'UN peacekeeping medical staff providing healthcare'
-  }
-];
+const heroImageUrl = '/lovable-uploads/8470ccda-6f99-4308-815a-8ee8f815319.png';
+const heroImageAlt = 'Military personnel holding a child';
 
 const HeroSection = () => {
-  const [autoPlay, setAutoPlay] = useState(true);
-  
-  useEffect(() => {
-    const interval = autoPlay 
-      ? setInterval(() => {
-          document.querySelector('.carousel-next-button')?.dispatchEvent(
-            new MouseEvent('click', { bubbles: true })
-          );
-        }, 5000) 
-      : undefined;
-    
-    return () => {
-      if (interval) clearInterval(interval);
-    };
-  }, [autoPlay]);
-
   return (
     <div className="relative h-screen">
       {/* Hero Image with Overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-60 z-10" />
       
-      {/* Slideshow */}
+      {/* Static Hero Image */}
       <div className="absolute inset-0">
-        <Carousel className="w-full h-full" opts={{ loop: true }}>
-          <CarouselContent className="h-full">
-            {slideImages.map((image, index) => (
-              <CarouselItem key={index} className="h-full">
-                <AspectRatio ratio={16/9} className="h-full">
-                  <div 
-                    className="w-full h-full bg-cover bg-center transition-transform duration-500 ease-in-out hover:scale-105"
-                    style={{
-                      backgroundImage: `url('${image.url}')`,
-                    }}
-                    aria-label={image.alt}
-                  />
-                </AspectRatio>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious className="left-4 z-20" />
-          <CarouselNext className="right-4 z-20 carousel-next-button" />
-        </Carousel>
+        <AspectRatio ratio={16/9} className="h-full">
+          <div 
+            className="w-full h-full bg-cover bg-center"
+            style={{
+              backgroundImage: `url('${heroImageUrl}')`,
+            }}
+            aria-label={heroImageAlt}
+          />
+        </AspectRatio>
       </div>
       
       {/* Content */}
