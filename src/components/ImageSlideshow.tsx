@@ -38,7 +38,6 @@ const ImageSlideshow = () => {
     }
 
     const interval = setInterval(() => {
-      // embla-carousel with loop:true handles the looping, so just call scrollNext
       api.scrollNext();
     }, 5000); // Change slide every 5 seconds
 
@@ -49,30 +48,37 @@ const ImageSlideshow = () => {
     <section className="py-16 bg-gray-100">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12 font-serif">Humanitarian Efforts in Action</h2>
-        <Carousel
-          opts={{ loop: true }}
-          setApi={setApi}
-          className="w-full max-w-4xl mx-auto" // Increased max-width for better display
-        >
-          <CarouselContent>
-            {slideImages.map((image, index) => (
-              <CarouselItem key={index}>
-                <div className="p-1">
-                  <AspectRatio ratio={16 / 9}>
-                    <img
-                      src={image.url}
-                      alt={image.alt}
-                      className="w-full h-full object-cover rounded-lg shadow-lg"
-                    />
-                  </AspectRatio>
-                  <p className="text-center mt-3 text-md text-gray-700 font-serif">{image.alt}</p>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 z-10 ml-[-20px] md:ml-[-40px] bg-white/80 hover:bg-white text-gray-800" />
-          <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 z-10 mr-[-20px] md:mr-[-40px] bg-white/80 hover:bg-white text-gray-800" />
-        </Carousel>
+        <div className="w-full max-w-4xl mx-auto overflow-hidden">
+          <Carousel
+            opts={{ 
+              loop: true,
+              dragFree: false,
+              skipSnaps: false,
+              align: "center"
+            }}
+            setApi={setApi}
+            className="w-full"
+          >
+            <CarouselContent>
+              {slideImages.map((image, index) => (
+                <CarouselItem key={index} className="h-full">
+                  <div className="p-1 h-full">
+                    <AspectRatio ratio={16 / 9} className="overflow-hidden">
+                      <img
+                        src={image.url}
+                        alt={image.alt}
+                        className="w-full h-full object-cover rounded-lg shadow-lg"
+                      />
+                    </AspectRatio>
+                    <p className="text-center mt-3 text-md text-gray-700 font-serif">{image.alt}</p>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 z-10 ml-[-20px] md:ml-[-40px] bg-white/80 hover:bg-white text-gray-800" />
+            <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 z-10 mr-[-20px] md:mr-[-40px] bg-white/80 hover:bg-white text-gray-800" />
+          </Carousel>
+        </div>
       </div>
     </section>
   );

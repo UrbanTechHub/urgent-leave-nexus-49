@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const Footer = () => {
@@ -13,7 +12,7 @@ const Footer = () => {
             </p>
             <div className="flex items-center">
               <img
-                src="https://www.un.org/sites/un2.un.org/themes/bootstrap_un_theme/images/logo-footer-en.svg"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/UN_emblem_blue.svg/1200px-UN_emblem_blue.svg.png"
                 alt="UN Logo"
                 className="h-10 w-auto mr-2"
               />
