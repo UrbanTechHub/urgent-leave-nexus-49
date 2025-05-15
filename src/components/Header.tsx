@@ -36,7 +36,7 @@ const Header = () => {
         
         <div className="flex items-center space-x-2">
           {/* Desktop Navigation */}
-          <div className="hidden md:flex">
+          <NavigationMenu className="hidden md:flex">
             <NavigationMenuList>
               <NavigationMenuItem>
                 <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
@@ -54,7 +54,7 @@ const Header = () => {
                 </NavigationMenuLink>
               </NavigationMenuItem>
             </NavigationMenuList>
-          </div>
+          </NavigationMenu>
           
           {/* Mobile Menu Button */}
           <Button
@@ -111,3 +111,4 @@ const Header = () => {
 };
 
 export default Header;
+
