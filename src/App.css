@@ -1,42 +1,83 @@
+
 #root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Form step transitions */
+.form-step-enter {
+  opacity: 0;
+  transform: translateX(20px);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form-step-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms, transform 300ms;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.form-step-exit {
+  opacity: 1;
+  transform: translateX(0);
 }
 
-.card {
-  padding: 2em;
+.form-step-exit-active {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 300ms, transform 300ms;
 }
 
-.read-the-docs {
-  color: #888;
+/* Custom focus styles */
+*:focus-visible {
+  outline: 2px solid #009EDB;
+  outline-offset: 2px;
+}
+
+/* Button hover animations */
+button:hover {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Helpers */
+.text-unblue {
+  color: #009EDB;
+}
+
+.bg-unblue {
+  background-color: #009EDB;
+}
+
+.border-unblue {
+  border-color: #009EDB;
 }
