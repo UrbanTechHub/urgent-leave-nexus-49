@@ -14,7 +14,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-black bg-opacity-60 z-10" />
       
       {/* Static Hero Image */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 z-0"> {/* Ensured z-index is lower than overlay */}
         <AspectRatio ratio={16/9} className="h-full">
           <div 
             className="w-full h-full bg-cover bg-center"

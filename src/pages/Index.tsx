@@ -6,6 +6,7 @@ import HeroSection from '@/components/HeroSection';
 import InfoSection from '@/components/InfoSection';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
+import ImageSlideshow from '@/components/ImageSlideshow'; // Import the new component
 
 const Index = () => {
   return (
@@ -47,6 +48,8 @@ const Index = () => {
             </div>
           </div>
         </section>
+        
+        <ImageSlideshow /> {/* Added the new slideshow section */}
         
         <InfoSection />
         
