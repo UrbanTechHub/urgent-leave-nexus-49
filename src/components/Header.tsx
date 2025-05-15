@@ -16,7 +16,7 @@ const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   
   return (
-    <header className="w-full bg-white shadow-sm fixed top-0 z-10">
+    <header className="w-full bg-white shadow-sm fixed top-0 z-50"> {/* Changed z-10 to z-50 */}
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <Link to="/" className="flex items-center">
           <div className="h-10 w-10 mr-2">
@@ -111,4 +111,3 @@ const Header = () => {
 };
 
 export default Header;
-
