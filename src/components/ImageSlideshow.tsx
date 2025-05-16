@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import {
   Carousel,
@@ -13,19 +12,19 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 const slideImages = [
   {
     url: '/lovable-uploads/f931d0f8-2b05-4bc3-acae-f70e235f5a74.png',
-    alt: 'Military personnel interacting with local civilians',
+    alt: 'Medical team assisting in a community outreach program',
   },
   {
     url: '/lovable-uploads/ddf73e06-5f6a-4a70-8968-4638ca11f964.png',
-    alt: 'Soldier providing aid to children',
+    alt: 'Healthcare worker providing compassionate aid to children',
   },
   {
     url: '/lovable-uploads/784eef9c-146d-4844-8f42-20b54b784d6e.png',
-    alt: 'Portrait of a soldier in the field',
+    alt: 'Portrait of a dedicated medical professional in the field',
   },
   {
     url: '/lovable-uploads/218f7bda-28da-47a7-8cdc-f3b05fb75f29.png',
-    alt: 'Soldier assisting with humanitarian aid supplies',
+    alt: 'Medical personnel organizing essential aid supplies',
   },
 ];
 

@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 const Footer = () => {
@@ -6,9 +7,9 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
-            <h3 className="text-lg font-semibold mb-4">UN Emergency Leave Center</h3>
+            <h3 className="text-lg font-semibold mb-4">UN Emergency Support Center</h3> {/* Updated */}
             <p className="text-gray-300 mb-4">
-              Supporting military personnel and their families during times of need with efficient emergency leave processing.
+              Supporting individuals and their families during times of need with efficient emergency processing. {/* Updated text */}
             </p>
             <div className="flex items-center">
               <img
@@ -23,7 +24,7 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Home</a></li>
-              <li><a href="#application-form" className="text-gray-300 hover:text-white transition-colors">Apply for Leave</a></li>
+              <li><a href="#application-form" className="text-gray-300 hover:text-white transition-colors">Apply for Support</a></li> {/* Updated */}
               <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Resources</a></li>
               <li><a href="#" className="text-gray-300 hover:text-white transition-colors">FAQ</a></li>
               <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Contact</a></li>
@@ -36,7 +37,7 @@ const Footer = () => {
               <li>United Nations Headquarters</li>
               <li>New York, NY 10017</li>
               <li>United States of America</li>
-              <li className="mt-4">Email: emergency@un.org</li>
+              <li className="mt-4">Email: emergencysupport@un.org</li> {/* Updated email */}
               <li>Tel: +1-212-555-1212</li>
             </ul>
           </div>
