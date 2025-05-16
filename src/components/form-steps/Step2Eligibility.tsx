@@ -22,21 +22,22 @@ const Step2Eligibility = () => {
     <div className="animate-fade-in max-w-2xl mx-auto">
       <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">Eligibility Check</h2>
       <p className="text-center mb-8 text-gray-600">
-        Please specify your relationship with the military personnel
+        Please specify your relationship with the personnel
       </p>
       
       <div className="mb-8">
         <Label htmlFor="relationship" className="text-gray-700 block mb-2">
-          What is your relationship with the military personnel?
+          What is your relationship with the personnel?
         </Label>
         <Select value={formData.relationship} onValueChange={handleChange}>
           <SelectTrigger className="w-full p-3 border border-gray-300 rounded">
             <SelectValue placeholder="Select relationship" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="Spouse">Spouse</SelectItem>
-            <SelectItem value="Sibling">Sibling</SelectItem>
-            <SelectItem value="Parent">Parent</SelectItem>
+            <SelectItem value="Husband or Wife (Spouse)">Husband or Wife (Spouse)</SelectItem>
+            <SelectItem value="Fiancée or Lover">Fiancée or Lover</SelectItem>
+            <SelectItem value="Siblings">Siblings</SelectItem>
+            <SelectItem value="Parents">Parents</SelectItem>
             <SelectItem value="Child">Child</SelectItem>
             <SelectItem value="Grandparent">Grandparent</SelectItem>
             <SelectItem value="Extended Family">Extended Family</SelectItem>

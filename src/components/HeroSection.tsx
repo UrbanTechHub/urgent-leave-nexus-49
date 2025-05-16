@@ -3,8 +3,8 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
-const heroImageUrl = '/lovable-uploads/39dceadb-f478-4230-93d4-c94da347bebc.png'; // Updated hero image
-const heroImageAlt = 'Aid worker interacting with a group of children in a humanitarian setting'; // Updated alt text
+const heroImageUrl = '/lovable-uploads/218f7bda-28da-47a7-8cdc-f3b05fb75f29.png'; // Medical personnel assisting a patient
+const heroImageAlt = 'Medical personnel assisting a patient in a field hospital'; // Updated alt text
 
 const HeroSection = () => {
   return (
@@ -35,7 +35,7 @@ const HeroSection = () => {
           asChild
           className="bg-unblue hover:bg-unblue-dark text-white px-8 py-6 text-lg font-serif hover:scale-105 transition-all duration-300"
         >
-          <Link to="/apply">Apply for Emergency Support</Link>
+          <Link to="/apply">Apply for Emergency Leave</Link>
         </Button>
       </div>
     </div>
