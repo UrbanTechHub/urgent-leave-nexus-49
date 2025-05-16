@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
 const heroImageUrl = '/lovable-uploads/8470ccda-6f99-4308-815a-8ee8f815319.png';
-const heroImageAlt = 'Aid worker assisting a child in a humanitarian context'; // Updated alt text
+const heroImageAlt = 'Aid worker assisting a child in a humanitarian context';
 
 const HeroSection = () => {
   return (
@@ -24,18 +24,17 @@ const HeroSection = () => {
       {/* Content */}
       <div className="container mx-auto px-6 relative h-full flex flex-col justify-center items-center text-white z-20">
         <h1 className="text-3xl md:text-5xl font-bold mb-6 text-center font-serif animate-fade-in">
-          United Nations Emergency Support Center {/* Updated title */}
+          United Nations Emergency Support Center
         </h1>
         <div className="w-20 h-1 bg-white mb-8" />
         <p className="text-md md:text-xl text-center max-w-2xl mb-10 font-serif animate-fade-in">
           The UN Emergency Support Center provides a streamlined process for family members 
-          to request emergency assistance for loved ones in UN-supported regions worldwide. {/* Updated paragraph */}
+          to request emergency assistance for loved ones in UN-supported regions worldwide.
         </p>
         <Button 
           className="bg-unblue hover:bg-unblue-dark text-white px-8 py-6 text-lg font-serif hover:scale-105 transition-all duration-300"
-          asChild
         >
-          <Link to="/apply">Apply for Emergency Support</Link> {/* Updated button text */}
+          <Link to="/apply">Apply for Emergency Support</Link>
         </Button>
       </div>
     </div>
