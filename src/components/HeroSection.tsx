@@ -3,8 +3,8 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
-const heroImageUrl = '/lovable-uploads/8470ccda-6f99-4308-815a-8ee8f815319.png';
-const heroImageAlt = 'Aid worker assisting a child in a humanitarian context';
+const heroImageUrl = '/lovable-uploads/39dceadb-f478-4230-93d4-c94da347bebc.png'; // Updated hero image
+const heroImageAlt = 'Aid worker interacting with a group of children in a humanitarian setting'; // Updated alt text
 
 const HeroSection = () => {
   return (
@@ -32,6 +32,7 @@ const HeroSection = () => {
           to request emergency assistance for loved ones in UN-supported regions worldwide.
         </p>
         <Button 
+          asChild
           className="bg-unblue hover:bg-unblue-dark text-white px-8 py-6 text-lg font-serif hover:scale-105 transition-all duration-300"
         >
           <Link to="/apply">Apply for Emergency Support</Link>

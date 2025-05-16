@@ -11,20 +11,28 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const slideImages = [
   {
-    url: '/lovable-uploads/f931d0f8-2b05-4bc3-acae-f70e235f5a74.png',
-    alt: 'Medical team assisting in a community outreach program',
+    url: '/lovable-uploads/bb7d5543-d8fd-46b1-b0ce-eb286007e85a.png',
+    alt: 'UNHCR tent in a refugee camp, a child visible at the entrance',
   },
   {
-    url: '/lovable-uploads/ddf73e06-5f6a-4a70-8968-4638ca11f964.png',
-    alt: 'Healthcare worker providing compassionate aid to children',
+    url: '/lovable-uploads/2671e683-796d-4902-8463-e2c70e16f889.png',
+    alt: 'Medical professionals caring for a child in a wheelchair in a hospital corridor',
   },
   {
-    url: '/lovable-uploads/784eef9c-146d-4844-8f42-20b54b784d6e.png',
-    alt: 'Portrait of a dedicated medical professional in the field',
+    url: '/lovable-uploads/3c4f8ae9-a85d-4f01-ac98-0e1edee0ad25.png',
+    alt: 'Diverse medical team in discussion in a hospital hallway',
   },
   {
-    url: '/lovable-uploads/218f7bda-28da-47a7-8cdc-f3b05fb75f29.png',
-    alt: 'Medical personnel organizing essential aid supplies',
+    url: '/lovable-uploads/39dceadb-f478-4230-93d4-c94da347bebc.png',
+    alt: 'Aid worker engaging with a group of smiling children outdoors',
+  },
+  {
+    url: '/lovable-uploads/f063641f-158e-4c7f-9c6a-3fb072d85417.png',
+    alt: 'Medical personnel in full PPE attending to a patient at an outdoor clinic setup',
+  },
+  {
+    url: '/lovable-uploads/edd663fb-088c-44e5-90e4-bda1331343a7.png',
+    alt: 'Close-up of a healthcare worker in PPE administering a vaccine to an elderly person',
   },
 ];
 

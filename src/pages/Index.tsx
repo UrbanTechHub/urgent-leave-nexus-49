@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
@@ -22,8 +21,8 @@ const Index = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div>
                 <img 
-                  src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b"
-                  alt="Medical innovation and support"
+                  src="/lovable-uploads/2671e683-796d-4902-8463-e2c70e16f889.png" // Updated image
+                  alt="Medical professionals caring for a child in a wheelchair" // Updated alt text
                   className="w-full h-auto rounded-lg shadow-lg"
                 />
               </div>
@@ -60,6 +59,7 @@ const Index = () => {
               Our streamlined application process makes it easy to request emergency support for individuals serving in UN missions.
             </p>
             <Button 
+              asChild
               className="bg-unblue hover:bg-unblue-dark text-white px-8 py-6 text-lg font-serif"
             >
               <Link to="/apply">Apply for Emergency Support</Link>

@@ -1,10 +1,9 @@
-
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { ArrowLeft } from 'lucide-react'; // Removed Home icon as it's not used
+import { ArrowLeft } from 'lucide-react';
 
 const AboutUs = () => {
   return (
@@ -31,9 +30,9 @@ const AboutUs = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
               <div>
                 <img 
-                  src="https://images.unsplash.com/photo-1518770660439-4636190af475" // Replaced image
-                  alt="Global Health Support Network technology" // Updated alt text
-                  className="rounded-lg shadow-md w-full h-auto"
+                  src="/lovable-uploads/3c4f8ae9-a85d-4f01-ac98-0e1edee0ad25.png" // Replaced image
+                  alt="Medical team discussing a case in a hospital corridor" // Updated alt text
+                  className="rounded-lg shadow-md w-full h-auto object-cover"
                 />
               </div>
               <div>
@@ -42,11 +41,11 @@ const AboutUs = () => {
                   The United Nations Emergency Support Center is dedicated to supporting individuals 
                   serving in UN peacekeeping and humanitarian missions worldwide. Our mission is to provide 
                   efficient and compassionate processing of emergency support requests, ensuring that those who serve 
-                  can return home when family emergencies arise. {/* Updated text */}
+                  can return home when family emergencies arise.
                 </p>
                 <p className="text-gray-700 font-serif">
                   Established in 2015, our center has processed over 10,000 emergency applications, 
-                  helping individuals from over 120 countries return to their families during times of need. {/* Updated text */}
+                  helping individuals from over 120 countries return to their families during times of need.
                 </p>
               </div>
             </div>
@@ -55,13 +54,13 @@ const AboutUs = () => {
               <h2 className="text-2xl font-semibold mb-4 text-center font-serif">Our Services</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="bg-gray-50 p-6 rounded-lg shadow">
-                  <h3 className="text-xl font-medium mb-3 font-serif">Short-Term Support</h3> {/* Updated */}
+                  <h3 className="text-xl font-medium mb-3 font-serif">Short-Term Support</h3>
                   <p className="text-gray-700 font-serif">
                     Expedited processing of emergency requests for periods of 1-14 days for urgent family matters.
                   </p>
                 </div>
                 <div className="bg-gray-50 p-6 rounded-lg shadow">
-                  <h3 className="text-xl font-medium mb-3 font-serif">Long-Term Support</h3> {/* Updated */}
+                  <h3 className="text-xl font-medium mb-3 font-serif">Long-Term Support</h3>
                   <p className="text-gray-700 font-serif">
                     Comprehensive processing of extended requests for periods of 15 days or more for serious emergencies.
                   </p>
@@ -79,22 +78,22 @@ const AboutUs = () => {
               <h2 className="text-2xl font-semibold mb-4 text-center font-serif">Our Team</h2>
               <p className="text-gray-700 mb-6 text-center font-serif">
                 Our dedicated staff includes liaison officers, humanitarian specialists, and 
-                logistics coordinators working around the clock to process emergency applications. {/* Updated text */}
+                logistics coordinators working around the clock to process emergency applications.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="text-center">
                   <img 
-                    src="https://images.unsplash.com/photo-1566492031773-4f4e44671857" 
-                    alt="Team Member James Wilson" 
+                    src="/lovable-uploads/f063641f-158e-4c7f-9c6a-3fb072d85417.png" // Updated image
+                    alt="Medical staff attending to a patient, representing James Wilson" 
                     className="w-40 h-40 object-cover rounded-full mx-auto mb-4"
                   />
-                  <h4 className="font-medium font-serif">James Wilson</h4> {/* Updated name */}
+                  <h4 className="font-medium font-serif">James Wilson</h4>
                   <p className="text-gray-600 font-serif">Director of Operations</p>
                 </div>
                 <div className="text-center">
                   <img 
-                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2" 
-                    alt="Team Member Dr. Sarah Ahmed" 
+                    src="/lovable-uploads/edd663fb-088c-44e5-90e4-bda1331343a7.png" // Updated image
+                    alt="Healthcare worker administering a vaccine, representing Dr. Sarah Ahmed" 
                     className="w-40 h-40 object-cover rounded-full mx-auto mb-4"
                   />
                   <h4 className="font-medium font-serif">Dr. Sarah Ahmed</h4>
@@ -102,12 +101,12 @@ const AboutUs = () => {
                 </div>
                 <div className="text-center">
                   <img 
-                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a" 
-                    alt="Team Member Robert Chen" 
+                    src="/lovable-uploads/bb7d5543-d8fd-46b1-b0ce-eb286007e85a.png" // Updated image
+                    alt="UNHCR tent in a refugee camp, representing Robert Chen" 
                     className="w-40 h-40 object-cover rounded-full mx-auto mb-4"
                   />
-                  <h4 className="font-medium font-serif">Robert Chen</h4> {/* Updated name */}
-                  <p className="text-gray-600 font-serif">Liaison Officer</p> {/* Updated title */}
+                  <h4 className="font-medium font-serif">Robert Chen</h4>
+                  <p className="text-gray-600 font-serif">Liaison Officer</p>
                 </div>
               </div>
             </div>
