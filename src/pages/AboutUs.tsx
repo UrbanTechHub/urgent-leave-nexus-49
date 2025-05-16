@@ -30,8 +30,8 @@ const AboutUs = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
               <div>
                 <img 
-                  src="/lovable-uploads/3c4f8ae9-a85d-4f01-ac98-0e1edee0ad25.png" // Replaced image
-                  alt="Medical team discussing a case in a hospital corridor" // Updated alt text
+                  src="/lovable-uploads/3c4f8ae9-a85d-4f01-ac98-0e1edee0ad25.png" 
+                  alt="Medical team discussing a case in a hospital corridor" 
                   className="rounded-lg shadow-md w-full h-auto object-cover"
                 />
               </div>
@@ -74,42 +74,6 @@ const AboutUs = () => {
               </div>
             </div>
             
-            <div>
-              <h2 className="text-2xl font-semibold mb-4 text-center font-serif">Our Team</h2>
-              <p className="text-gray-700 mb-6 text-center font-serif">
-                Our dedicated staff includes liaison officers, humanitarian specialists, and 
-                logistics coordinators working around the clock to process emergency applications.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="text-center">
-                  <img 
-                    src="/lovable-uploads/f063641f-158e-4c7f-9c6a-3fb072d85417.png" // Updated image
-                    alt="Medical staff attending to a patient, representing James Wilson" 
-                    className="w-40 h-40 object-cover rounded-full mx-auto mb-4"
-                  />
-                  <h4 className="font-medium font-serif">James Wilson</h4>
-                  <p className="text-gray-600 font-serif">Director of Operations</p>
-                </div>
-                <div className="text-center">
-                  <img 
-                    src="/lovable-uploads/edd663fb-088c-44e5-90e4-bda1331343a7.png" // Updated image
-                    alt="Healthcare worker administering a vaccine, representing Dr. Sarah Ahmed" 
-                    className="w-40 h-40 object-cover rounded-full mx-auto mb-4"
-                  />
-                  <h4 className="font-medium font-serif">Dr. Sarah Ahmed</h4>
-                  <p className="text-gray-600 font-serif">Humanitarian Affairs Coordinator</p>
-                </div>
-                <div className="text-center">
-                  <img 
-                    src="/lovable-uploads/bb7d5543-d8fd-46b1-b0ce-eb286007e85a.png" // Updated image
-                    alt="UNHCR tent in a refugee camp, representing Robert Chen" 
-                    className="w-40 h-40 object-cover rounded-full mx-auto mb-4"
-                  />
-                  <h4 className="font-medium font-serif">Robert Chen</h4>
-                  <p className="text-gray-600 font-serif">Liaison Officer</p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>

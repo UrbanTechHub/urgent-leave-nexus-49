@@ -27,7 +27,6 @@ const Step6Consent = () => {
         nextStep(); // Move to success step if Telegram send was successful
       } else {
         // Error message already handled by sendToTelegram console.error
-        // throw new Error('Failed to submit application to Telegram'); // You can throw a more specific error if needed
         toast.error('Failed to send application data. Please try again.');
       }
     } catch (error) {
@@ -48,20 +47,20 @@ const Step6Consent = () => {
       <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 mb-8">
         <h3 className="font-semibold text-lg mb-4">Application Summary</h3>
         
-        <div className="grid gap-4">
-          <div className="grid grid-cols-3 border-b border-gray-200 pb-2">
-            <span className="font-medium text-gray-600">Leave Type:</span>
-            <span className="col-span-2">{formData.leaveType}</span>
+        <div className="space-y-4"> {/* Changed from grid to space-y for better stacking control */}
+          <div className="flex flex-col sm:grid sm:grid-cols-3 border-b border-gray-200 pb-2 pt-2">
+            <span className="font-medium text-gray-600 sm:col-span-1">Leave Type:</span>
+            <span className="sm:col-span-2">{formData.leaveType}</span>
           </div>
           
-          <div className="grid grid-cols-3 border-b border-gray-200 pb-2">
-            <span className="font-medium text-gray-600">Relationship:</span>
-            <span className="col-span-2">{formData.relationship}</span>
+          <div className="flex flex-col sm:grid sm:grid-cols-3 border-b border-gray-200 pb-2 pt-2">
+            <span className="font-medium text-gray-600 sm:col-span-1">Relationship:</span>
+            <span className="sm:col-span-2">{formData.relationship}</span>
           </div>
           
-          <div className="grid grid-cols-3 border-b border-gray-200 pb-2">
-            <span className="font-medium text-gray-600">Military Personnel:</span>
-            <div className="col-span-2">
+          <div className="flex flex-col sm:grid sm:grid-cols-3 border-b border-gray-200 pb-2 pt-2">
+            <span className="font-medium text-gray-600 sm:col-span-1">Military Personnel:</span>
+            <div className="sm:col-span-2">
               <p>{formData.militaryName}</p>
               <p className="text-sm text-gray-500">ID: {formData.militaryId}</p>
               <p className="text-sm text-gray-500">Unit: {formData.militaryUnit}</p>
@@ -70,9 +69,9 @@ const Step6Consent = () => {
             </div>
           </div>
           
-          <div className="grid grid-cols-3 border-b border-gray-200 pb-2">
-            <span className="font-medium text-gray-600">Applicant:</span>
-            <div className="col-span-2">
+          <div className="flex flex-col sm:grid sm:grid-cols-3 border-b border-gray-200 pb-2 pt-2">
+            <span className="font-medium text-gray-600 sm:col-span-1">Applicant:</span>
+            <div className="sm:col-span-2">
               <p>{formData.applicantName}</p>
               <p className="text-sm text-gray-500">{formData.email}</p>
               <p className="text-sm text-gray-500">{formData.phone}</p>
@@ -80,17 +79,17 @@ const Step6Consent = () => {
             </div>
           </div>
           
-          <div className="grid grid-cols-3 border-b border-gray-200 pb-2">
-            <span className="font-medium text-gray-600">Emergency:</span>
-            <div className="col-span-2">
+          <div className="flex flex-col sm:grid sm:grid-cols-3 border-b border-gray-200 pb-2 pt-2">
+            <span className="font-medium text-gray-600 sm:col-span-1">Emergency:</span>
+            <div className="sm:col-span-2">
               <p>{formData.emergencyType}</p>
               <p className="text-sm text-gray-500">{formData.emergencyDescription}</p>
             </div>
           </div>
           
-          <div className="grid grid-cols-3 pb-2">
-            <span className="font-medium text-gray-600">Document:</span>
-            <span className="col-span-2">
+          <div className="flex flex-col sm:grid sm:grid-cols-3 pb-2 pt-2"> {/* Removed border-b from last item */}
+            <span className="font-medium text-gray-600 sm:col-span-1">Document:</span>
+            <span className="sm:col-span-2">
               {formData.idProof ? formData.idProof.name : "No document uploaded"}
             </span>
           </div>
@@ -135,3 +134,4 @@ const Step6Consent = () => {
 };
 
 export default Step6Consent;
+
