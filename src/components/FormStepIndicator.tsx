@@ -27,7 +27,7 @@ const FormStepIndicator = () => {
       {/* Visible on desktop */}
       <div className="hidden md:flex justify-between items-center px-2">
         {steps.map((step, index) => (
-          <React.Fragment key={step.number}>
+          <div key={step.number} className="contents">
             {/* Step indicator */}
             <div 
               onClick={() => handleStepClick(step.number)}
@@ -60,7 +60,7 @@ const FormStepIndicator = () => {
                 )}
               />
             )}
-          </React.Fragment>
+          </div>
         ))}
       </div>
 
