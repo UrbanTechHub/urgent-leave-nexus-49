@@ -1,4 +1,5 @@
 
+import unLogoAsset from '@/assets/un-logo-transparent.png.asset.json';
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';

@@ -1,4 +1,5 @@
 
+import unLogoAsset from '@/assets/un-logo-transparent.png.asset.json';
 import React from 'react';
 
 const Footer = () => {
