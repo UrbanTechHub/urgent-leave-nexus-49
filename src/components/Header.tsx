@@ -22,7 +22,7 @@ const Header = () => {
         <Link to="/" className="flex items-center">
           <div className="h-10 w-10 mr-2">
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/UN_emblem_blue.svg/1200px-UN_emblem_blue.svg.png"
+              src={unLogoAsset.url}
               alt="UN Logo"
               className="h-full w-full object-contain"
             />

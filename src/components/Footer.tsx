@@ -14,7 +14,7 @@ const Footer = () => {
             </p>
             <div className="flex items-center">
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/UN_emblem_blue.svg/1200px-UN_emblem_blue.svg.png"
+                src={unLogoAsset.url}
                 alt="UN Logo"
                 className="h-10 w-auto mr-2"
               />
