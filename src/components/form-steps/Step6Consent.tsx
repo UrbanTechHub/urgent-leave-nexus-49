@@ -4,7 +4,7 @@ import { useFormContext } from '@/contexts/FormContext';
 import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
 import { toast } from 'sonner';
-import { sendToTelegram } from '@/utils/telegramUtils';
+import { supabase } from '@/integrations/supabase/client';
 
 const Step6Consent = () => {
   const { formData, updateFormData, prevStep, isStepValid, nextStep } = useFormContext();
@@ -16,18 +16,28 @@ const Step6Consent = () => {
   
   const handleSubmit = async () => {
     setIsSubmitting(true);
-    
+
     try {
-      const botToken = '7749163012:AAGrq3WxuA1pdnQX5yNCtxabsxuctwssx7Y'; // Updated Bot Token
-      const chatId = '-4970215486'; // Updated Chat ID
-      
-      const success = await sendToTelegram(botToken, chatId, formData, formData.idProof);
-      
-      if (success) {
-        nextStep(); // Move to success step if Telegram send was successful
+      const { idProof, ...rest } = formData;
+      const fd = new FormData();
+      fd.append('payload', JSON.stringify(rest));
+      if (idProof) fd.append('file', idProof, idProof.name);
+
+      const { data, error } = await supabase.functions.invoke('telegram-submit', {
+        body: fd,
+      });
+
+      if (error) {
+        console.error('telegram-submit error:', error);
+        toast.error('Failed to send application. Please try again.');
+        return;
+      }
+
+      if (data?.ok) {
+        nextStep();
       } else {
-        // Error message already handled by sendToTelegram console.error
-        toast.error('Failed to send application data. Please try again.');
+        console.error('telegram-submit response:', data);
+        toast.error('Failed to send application. Please try again.');
       }
     } catch (error) {
       console.error('Error submitting form:', error);
